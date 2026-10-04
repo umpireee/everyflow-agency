@@ -318,105 +318,105 @@
           Submit your parameters below to locate core workflow gaps inside your
           current business software setup.
         </p>
+        <!-- 04. THE ACTUAL HTML FORM -->
+        <form
+          id="audit-form"
+          style="
+            background-color: #0b111e;
+            padding: 40px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            font-family: sans-serif;
+            color: white;
+          "
+        >
+          <div style="display: flex; gap: 15px; margin-bottom: 15px">
+            <input
+              type="text"
+              id="first_name"
+              name="first_name"
+              placeholder="First Name"
+              required
+              style="
+                flex: 1;
+                padding: 12px;
+                background: #050b14;
+                border: 1px solid #1e293b;
+                color: white;
+                border-radius: 4px;
+              "
+            />
+            <input
+              type="text"
+              id="company_name"
+              name="company_name"
+              placeholder="Company Name"
+              required
+              style="
+                flex: 1;
+                padding: 12px;
+                background: #050b14;
+                border: 1px solid #1e293b;
+                color: white;
+                border-radius: 4px;
+              "
+            />
+          </div>
+
+          <div style="margin-bottom: 20px">
+            <input
+              type="email"
+              id="corporate_email"
+              name="corporate_email"
+              placeholder="Corporate Email Address"
+              required
+              style="
+                width: 100%;
+                padding: 12px;
+                background: #050b14;
+                border: 1px solid #1e293b;
+                color: white;
+                border-radius: 4px;
+                box-sizing: border-box;
+              "
+            />
+          </div>
+
+          <button
+            type="submit"
+            id="submit-btn"
+            style="
+              width: 100%;
+              padding: 14px;
+              background-color: #2ecc71;
+              color: black;
+              border: none;
+              font-weight: bold;
+              border-radius: 4px;
+              cursor: pointer;
+              text-transform: uppercase;
+            "
+          >
+            REQUEST FREE SYSTEM AUDIT
+          </button>
+
+          <!-- Success confirmation layout overlay -->
+          <p
+            id="success-msg"
+            style="
+              display: none;
+              color: #2ecc71;
+              font-weight: 600;
+              margin-top: 15px;
+              text-align: center;
+            "
+          >
+            ✓ Request received. Your automated audit pipeline has started!
+          </p>
+        </form>
       </div>
     </section>
-    <!-- 04. THE ACTUAL HTML FORM -->
-    <form
-      id="audit-form"
-      style="
-        background-color: #0b111e;
-        padding: 40px;
-        border-radius: 8px;
-        max-width: 600px;
-        margin: 0 auto;
-        font-family: sans-serif;
-        color: white;
-      "
-    >
-      <div style="display: flex; gap: 15px; margin-bottom: 15px">
-        <input
-          type="text"
-          id="first_name"
-          name="first_name"
-          placeholder="First Name"
-          required
-          style="
-            flex: 1;
-            padding: 12px;
-            background: #050b14;
-            border: 1px solid #1e293b;
-            color: white;
-            border-radius: 4px;
-          "
-        />
-        <input
-          type="text"
-          id="company_name"
-          name="company_name"
-          placeholder="Company Name"
-          required
-          style="
-            flex: 1;
-            padding: 12px;
-            background: #050b14;
-            border: 1px solid #1e293b;
-            color: white;
-            border-radius: 4px;
-          "
-        />
-      </div>
-
-      <div style="margin-bottom: 20px">
-        <input
-          type="email"
-          id="corporate_email"
-          name="corporate_email"
-          placeholder="Corporate Email Address"
-          required
-          style="
-            width: 100%;
-            padding: 12px;
-            background: #050b14;
-            border: 1px solid #1e293b;
-            color: white;
-            border-radius: 4px;
-            box-sizing: border-box;
-          "
-        />
-      </div>
-
-      <button
-        type="submit"
-        id="submit-btn"
-        style="
-          width: 100%;
-          padding: 14px;
-          background-color: #2ecc71;
-          color: black;
-          border: none;
-          font-weight: bold;
-          border-radius: 4px;
-          cursor: pointer;
-          text-transform: uppercase;
-        "
-      >
-        REQUEST FREE SYSTEM AUDIT
-      </button>
-
-      <!-- Success confirmation layout overlay -->
-      <p
-        id="success-msg"
-        style="
-          display: none;
-          color: #2ecc71;
-          font-weight: 600;
-          margin-top: 15px;
-          text-align: center;
-        "
-      >
-        ✓ Request received. Your automated audit pipeline has started!
-      </p>
-    </form>
 
     <!-- BACKEND HTTP JAVASCRIPT HANDLER -->
     <script>
