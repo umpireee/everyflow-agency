@@ -318,61 +318,9 @@
           Submit your parameters below to locate core workflow gaps inside your
           current business software setup.
         </p>
-        <form
-          class="main-form"
-          onsubmit="
-            event.preventDefault();
-            alert(
-              'Systems Audit Initialized! Connecting with Technical Lead...',
-            );
-          "
-        >
-          <div class="form-grid">
-            <div>
-              <input
-                type="text"
-                class="form-input"
-                placeholder="First Name"
-                required
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                class="form-input"
-                placeholder="Company Name"
-                required
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <input
-              type="email"
-              class="form-input"
-              placeholder="Corporate Email Address"
-              required
-              id="corporate_email"
-            />
-          </div>
-          <button type="submit" class="cta-form-btn" id="submit-btn">
-            Request Free System Audit
-          </button>
-          <p
-            id="success-msg"
-            style="
-              display: none;
-              color: #2ecc71;
-              text-align: center;
-              margin-top: 15px;
-              font-weight: 600;
-            "
-          >
-            ✓ Request received. Your automated audit pipeline has started!
-          </p>
-        </form>
       </div>
     </section>
-    <!-- THE ACTUAL HTML FORM -->
+    <!-- 04. THE ACTUAL HTML FORM -->
     <form
       id="audit-form"
       style="
