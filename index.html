@@ -400,13 +400,6 @@
 
     <!-- BACKEND HTTP JAVASCRIPT HANDLER -->
     <script>
-      const formData = {
-        first_name: document.getElementById("first_name").value,
-        last_name: document.getElementById("last_name").value,
-        company_name: document.getElementById("company_name").value,
-        corporate_email: document.getElementById("corporate_email").value,
-        automation_needs: document.getElementById("automation_needs").value,
-      };
       document
         .getElementById("audit-form")
         .addEventListener("submit", async function (e) {
@@ -420,8 +413,10 @@
 
           const formData = {
             first_name: document.getElementById("first_name").value,
+            last_name: document.getElementById("last_name").value,
             company_name: document.getElementById("company_name").value,
             corporate_email: document.getElementById("corporate_email").value,
+            automation_needs: document.getElementById("automation_needs").value,
           };
 
           try {
