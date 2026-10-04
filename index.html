@@ -313,66 +313,60 @@
     <!-- 04. CONTACT FORM CTA WITH ACTION TARGET -->
     <section id="contact" class="audit-section">
       <div class="form-box">
-        <h3>Initiate Your Systems Audit</h3>
-        <p>
-          Submit your parameters below to locate core workflow gaps inside your
-          current business software setup.
-        </p>
-        <!-- 04. THE ACTUAL HTML FORM -->
-        <form
-          id="audit-form"
-          style="
-            background-color: #0b111e;
-            padding: 40px;
-            border-radius: 8px;
-            max-width: 600px;
-            margin: 0 auto;
-            font-family: sans-serif;
-            color: white;
-          "
-        >
-          <div style="display: flex; gap: 15px; margin-bottom: 15px">
+        <form id="audit-form" class="main-form">
+          <div class="form-group">
+            <div style="display: flex; gap: 15px; margin-bottom: 15px">
+              <input
+                type="text"
+                placeholder="First Name"
+                required
+                id="first_name"
+                class="form-input"
+                style="flex: 1"
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                required
+                id="last_name"
+                class="form-input"
+                style="flex: 1"
+              />
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 15px">
             <input
               type="text"
-              id="first_name"
-              name="first_name"
-              placeholder="First Name"
-              required
-              style="
-                flex: 1;
-                padding: 12px;
-                background: #050b14;
-                border: 1px solid #1e293b;
-                color: white;
-                border-radius: 4px;
-              "
-            />
-            <input
-              type="text"
-              id="company_name"
-              name="company_name"
               placeholder="Company Name"
               required
-              style="
-                flex: 1;
-                padding: 12px;
-                background: #050b14;
-                border: 1px solid #1e293b;
-                color: white;
-                border-radius: 4px;
-              "
+              id="company_name"
+              class="form-input"
+              style="width: 100%"
             />
           </div>
 
-          <div style="margin-bottom: 20px">
+          <div class="form-group" style="margin-bottom: 15px">
             <input
               type="email"
-              id="corporate_email"
-              name="corporate_email"
               placeholder="Corporate Email Address"
               required
+              id="corporate_email"
+              class="form-input"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="form-group" style="margin-bottom: 20px">
+            <textarea
+              placeholder="Ex:Our team manually vets incoming leads, which has become a major bottleneck. We need to reduce manual data entry, improve lead qualification, and make sure qualified leads are followed up with and booked for a meeting."
+              required
+              id="automation_needs"
+              class="form-input"
               style="
                 width: 100%;
+                min-height: 100px;
+                font-family: sans-serif;
                 padding: 12px;
                 background: #050b14;
                 border: 1px solid #1e293b;
@@ -380,39 +374,25 @@
                 border-radius: 4px;
                 box-sizing: border-box;
               "
-            />
+            ></textarea>
           </div>
 
-          <button
-            type="submit"
-            id="submit-btn"
-            style="
-              width: 100%;
-              padding: 14px;
-              background-color: #2ecc71;
-              color: black;
-              border: none;
-              font-weight: bold;
-              border-radius: 4px;
-              cursor: pointer;
-              text-transform: uppercase;
-            "
-          >
-            REQUEST FREE SYSTEM AUDIT
+          <button type="submit" class="cta-form-btn" id="submit-btn">
+            Request Free System Audit
           </button>
 
-          <!-- Success confirmation layout overlay -->
           <p
             id="success-msg"
             style="
               display: none;
               color: #2ecc71;
-              font-weight: 600;
-              margin-top: 15px;
               text-align: center;
+              margin-top: 15px;
+              font-weight: 600;
             "
           >
-            ✓ Request received. Your automated audit pipeline has started!
+            ✓ Request received. Expect a free discovery call link in your inbox
+            within 5 minutes.
           </p>
         </form>
       </div>
@@ -420,6 +400,13 @@
 
     <!-- BACKEND HTTP JAVASCRIPT HANDLER -->
     <script>
+      const formData = {
+        first_name: document.getElementById("first_name").value,
+        last_name: document.getElementById("last_name").value,
+        company_name: document.getElementById("company_name").value,
+        corporate_email: document.getElementById("corporate_email").value,
+        automation_needs: document.getElementById("automation_needs").value,
+      };
       document
         .getElementById("audit-form")
         .addEventListener("submit", async function (e) {
